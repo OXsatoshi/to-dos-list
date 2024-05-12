@@ -32,7 +32,11 @@ main{
 .side-bare   {
     width: 100%;
     grid-row: 1 / 2;
-    border: 1px black solid;    
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;    
 
 }
 footer{
@@ -74,3 +78,23 @@ body > header > div.logo > span:nth-child(2){
 .left-side svg {
     fill: red;
 }
+
+.home-box,.project-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.side-bare div div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.side-bare div div:hover {
+    border-bottom:2px #2abd67 solid;
+    cursor: pointer;
+}
+.side-bare h1 {
+    border-bottom: #2abd67 3px solid;
+}
+

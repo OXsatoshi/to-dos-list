@@ -2,10 +2,21 @@ import './styles.css'
 
 import { handleLightTheme,handleDarkTheme } from './themeChangeHandler';
 import { menuIconForDark, menuIconForWhite } from './iconImageGenerator';
+import { displaySideMenu } from './sideBare';
 const pageLoad = false;
 handleLightTheme(pageLoad);
 
-const toggle = document.querySelector('input');
+const toggle = document.querySelector('input#theme-toggle');
+const menuCheckbox = document.querySelector('#menu-hide');
+console.log('before side bare');
+displaySideMenu();
+menuCheckbox.addEventListener("change",()=>{
+    if(menuCheckbox.checked){
+        console.log('hide menu')
+    }else{
+        console.log('show menu');
+    }
+})
 document.querySelector(".left-side").appendChild(menuIconForWhite);
 
 toggle.addEventListener('change',()=>{
