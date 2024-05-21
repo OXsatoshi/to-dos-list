@@ -14,6 +14,8 @@ body {
     display: grid;
     height: 100vh;
     grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 1fr 5fr;
+
 }
 header{
     border-bottom: 3px #2abd67 solid;    
@@ -23,15 +25,25 @@ header{
     grid-row: 1/2;
     padding-left: 30px;
     padding-right: 30px;
+    grid-column: 1/3;
 }
 main{
     grid-row: 2/3;
+    grid-column: 2/3;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-rows:100px repeat(auto-fit, minmax(50px, 50%));
+
+}
+.menu-header{
+    background-color: #2abd67;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    margin: 20px 20px 20px 20px;
 }
 .side-bare   {
     width: 100%;
-    grid-row: 1 / 2;
+    grid-row: 2/ 3;
+    grid-column: 1/2;
     border: 1px black solid;
     display: flex;
     flex-direction: column;
@@ -41,6 +53,7 @@ main{
 }
 footer{
     grid-row: 3/4;
+    grid-column: 1/-1;
     border: 1px black solid;    
 
 }
@@ -98,3 +111,29 @@ body > header > div.logo > span:nth-child(2){
     border-bottom: #2abd67 3px solid;
 }
 
+.new-project-ui{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.new-project-ui input {
+    height:1.6rem;
+    width: 80%;
+}
+.new-project-ui button {
+    width: 50px;
+    height: 1.4rem;
+    margin-bottom: 5px;
+}
+.new-project-ui button.add-button {
+    background-color: #2abd67;
+    color: white;
+}
+.new-project-ui button.cancel-button {
+    background-color:red;
+    color: white;
+}
+.side-bare .new-project-ui:hover,.side-bare .new-project-ui div:hover{
+    border-bottom: none;
+    background-color: khaki;
+}

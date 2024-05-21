@@ -8,7 +8,6 @@ handleLightTheme(pageLoad);
 
 const toggle = document.querySelector('input#theme-toggle');
 const menuCheckbox = document.querySelector('#menu-hide');
-console.log('before side bare');
 displaySideMenu();
 menuCheckbox.addEventListener("change",()=>{
     if(menuCheckbox.checked){
